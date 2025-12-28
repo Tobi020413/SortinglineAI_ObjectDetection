@@ -1,0 +1,5 @@
+Crack
+Drillhole
+Slot
+DamagedDrillhole
+Blank
