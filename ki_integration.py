@@ -52,15 +52,6 @@ def init_model():
 
 
 def run_inference(frame):
-    """
-    Nimmt ein Kamerabild (NumPy-Array vom TXT) und gibt eine Liste von
-    Detections zurück:
-    [
-      {"label": str, "score": float, "position": [x1, y1, x2, y2]},
-      ...
-    ]
-    Die Position ist in Pixeln relativ zu der Größe, die ins Modell geht (_input_w x _input_h).
-    """
 
     global _interpreter, _input_details, _output_details, _input_h, _input_w, _labels
 
