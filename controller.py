@@ -1,0 +1,28 @@
+import fischertechnik.factories as txt_factory
+
+txt_factory.init()
+txt_factory.init_input_factory()
+txt_factory.init_output_factory()
+txt_factory.init_motor_factory()
+txt_factory.init_counter_factory()
+txt_factory.init_usb_factory()
+txt_factory.init_camera_factory()
+
+TXT_SLD_M = txt_factory.controller_factory.create_graphical_controller()
+TXT_SLD_M_I4_photo_transistor = txt_factory.input_factory.create_photo_transistor(TXT_SLD_M, 4)
+TXT_SLD_M_I5_photo_transistor = txt_factory.input_factory.create_photo_transistor(TXT_SLD_M, 5)
+TXT_SLD_M_I6_photo_transistor = txt_factory.input_factory.create_photo_transistor(TXT_SLD_M, 6)
+TXT_SLD_M_I7_photo_transistor = txt_factory.input_factory.create_photo_transistor(TXT_SLD_M, 7)
+TXT_SLD_M_I8_photo_transistor = txt_factory.input_factory.create_photo_transistor(TXT_SLD_M, 8)
+TXT_SLD_M_O5_magnetic_valve = txt_factory.output_factory.create_magnetic_valve(TXT_SLD_M, 5)
+TXT_SLD_M_O6_magnetic_valve = txt_factory.output_factory.create_magnetic_valve(TXT_SLD_M, 6)
+TXT_SLD_M_O7_magnetic_valve = txt_factory.output_factory.create_magnetic_valve(TXT_SLD_M, 7)
+TXT_SLD_M_O3_compressor = txt_factory.output_factory.create_compressor(TXT_SLD_M, 3)
+TXT_SLD_M_O4_led = txt_factory.output_factory.create_led(TXT_SLD_M, 4)
+TXT_SLD_M_O8_magnetic_valve = txt_factory.output_factory.create_magnetic_valve(TXT_SLD_M, 8)
+TXT_SLD_M_M1_encodermotor = txt_factory.motor_factory.create_encodermotor(TXT_SLD_M, 1)
+TXT_SLD_M_C1_motor_step_counter = txt_factory.counter_factory.create_encodermotor_counter(TXT_SLD_M, 1)
+TXT_SLD_M_C1_motor_step_counter.set_motor(TXT_SLD_M_M1_encodermotor)
+TXT_SLD_M_USB1_1_camera = txt_factory.usb_factory.create_camera(TXT_SLD_M, 1)
+
+txt_factory.initialized()
